@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Incubadora neonatal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p style="text-align: center; font-size: 2rem">
+    <b>Monitoração dos parâmetros da incubadora.</b>
+  </p>
+
+  <p style="text-align: center;">
+    <button ion-button color="danger" full large block icon-left (click)="goToTempPage()">
+      <ion-icon name="thermometer"></ion-icon>
+      Temperatura
+    </button>
+  </p>
+
+  <p style="text-align: center">
+    <button ion-button color="secondary" full large block icon-left (click)="goToLumPage()">
+      <ion-icon name="sunny"></ion-icon>
+      Luminosidade
+    </button>
+  </p>
+
+  <br>
+
+  <p style="text-align: center">
+    <button ion-button color="primary" full block icon-left (click)="startRingBuzzer()">
+      <ion-icon name="notifications-outline"></ion-icon>
+      Acionar alarme
+    </button>
+  </p>
+
+  <p style="text-align: center">
+    <button ion-button color="primary" full block icon-left (click)="stopRingBuzzer()">
+      <ion-icon name="notifications-off"></ion-icon>
+      Desacionar alarme
+    </button>
+  </p>
+
+  <br>
+
+  <ion-card>
+    <ion-card-content style="font-size: 2rem">
+      <b>Botão:</b> {{botao}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content style="font-size: 2rem">
+      <b>Touch:</b> {{toque}}
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-content style="font-size: 2rem">
+      <b>Status:</b> {{estado}}
+    </ion-card-content>
+  </ion-card>
+ 
+</ion-content>
